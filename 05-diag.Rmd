@@ -51,7 +51,9 @@ The scatterplot shown in Figure \@ref(fig:ass1)(b) is an example of when this as
 - then when $-1.2 < x < 1$, the data points are generally below the regression line; 
 - and then when $x \geq 1$, the data points are generally above the regression line. 
 
-*Please see the associated video for more explanation on how to use Figure \@ref(fig:ass1) to assess assumption 1.* 
+Please see the video below for more explanation on how to use Figure \@ref(fig:ass1) to assess assumption 1. 
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Checking Assumption 1 using Scatterplot" src="https://virginiauniversity.instructuremedia.com/embed/db4864f2-d44a-4904-9749-64f1c6847f4e" frameborder="0"></iframe>
 
 #### Consequences of violating this assumption
 
@@ -75,7 +77,9 @@ knitr::include_graphics("images/ass2.jpg")
 
 The scatterplot shown in Figure \@ref(fig:ass2)(b) is an example of when this assumption is **not** met. As we move from left to right on the plot in Figure \@ref(fig:ass2)(b), the vertical variation of the data points about the regression line becomes larger as the value of the response variable gets larger, so the variance is not constant. 
 
-*Please see the associated video for more explanation on how to use Figure \@ref(fig:ass2) to assess assumption 2.* 
+Please see the video below for more explanation on how to use Figure \@ref(fig:ass2) to assess assumption 2.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Checking Assumption 2 using Scatterplot" src="https://virginiauniversity.instructuremedia.com/embed/54a1f8fe-8d51-49d8-b172-057d7b4f4095" frameborder="0"></iframe>
 
 #### Consequences of violating this assumption
 
@@ -172,7 +176,9 @@ We make the following observations:
 
 If you compare the conclusions from the residuals plots and scatterplots, they are the same. In SLR, the takeaways should be consistent.
 
-*Please see the associated video for more explanation on how to use Figure \@ref(fig:resplots) to assess assumptions 1 and 2.* 
+Please see the video below for more explanation on how to use Figure \@ref(fig:resplots) to assess assumptions 1 and 2. 
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Checking Assumptions using Residual Plot" src="https://virginiauniversity.instructuremedia.com/embed/d17b080c-4ac7-47c3-855f-3fe36ba5ef74" frameborder="0"></iframe>
 
 #### Practice questions
 
@@ -180,11 +186,13 @@ If you compare the conclusions from the residuals plots and scatterplots, they a
 
 2. The residual plot in Figure \@ref(fig:practice)(b) comes from regressing price of cars against age for the used cars dataset. Based on this residual plot, which assumptions are met?
 
-*Please see the associated video as I go over these practice questions.*
-
 ```{r practice, fig.cap='Residual Plots for Practice Questions', echo=FALSE, message=FALSE}
 knitr::include_graphics("images/practice.jpg")
 ```
+
+Please see the video below as I go over these practice questions.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Section 3.2.1 Practice Questions" src="https://virginiauniversity.instructuremedia.com/embed/d5c3a136-3f19-43e5-ae5c-508ed51c3e53" frameborder="0"></iframe>
 
 ### ACF plot
 
@@ -293,7 +301,9 @@ A log transformation on the response is preferred over any other transformation,
   - If $\hat{\beta}_1$ is positive, we have a percent **increase**. The predicted response variable increases by $(\exp(\hat{\beta_1}) - 1) \times 100$ percent for a one-unit increase in the predictor.
   - If $\hat{\beta}_1$ is negative, we have a percent **decrease**. The predicted response variable decreases by $(1 - \exp(\hat{\beta_1})) \times 100$ percent for a one-unit increase in the predictor.
   
-*Please see the associated video as I go over the math explaining how we interpret regression coefficients when the response variable is log transformed.*
+Please see the video below as I go over the math explaining how we interpret regression coefficients when the response variable is log transformed.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Coeff Interpretation with Log Transformed Y" src="https://virginiauniversity.instructuremedia.com/embed/94a5235d-47e5-4f5d-b7ab-08477bca24e8" frameborder="0"></iframe>
 
 ## Remedial Measures: Linearization Transformations
 
@@ -316,7 +326,9 @@ A log transformation on the predictor is preferred over any other transformation
 - For an $a\%$ increase in the predictor, the predicted response **increases by $\hat{\beta}_1 \log(1+ \frac{a}{100})$.**
 - $\log(1 + \frac{1}{100}) \approx \frac{1}{100}$ (Taylor series). So an alternative interpretation is: for a 1% increase in the predictor, the predicted response increases by approximately $\frac{\hat{\beta}_1}{100}$.
 
-*Please see the associated video as I go over the math explaining how we interpret regression coefficients when the predictor variable is log transformed.*
+Please see the video below as I go over the math explaining how we interpret regression coefficients when the predictor variable is log transformed.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Coeff Interpretation with Log Transformed X" src="https://virginiauniversity.instructuremedia.com/embed/7f9f9b27-3db3-449a-81cb-4bbad7bc4cdb" frameborder="0"></iframe>
 
 ### Interpretation with Log Transformed Response and Predictor
 
@@ -326,7 +338,9 @@ If both response and predictor variables are log transformed, the regression coe
 
 - $(1 + \frac{1}{100})^{\hat{\beta}_1} \approx 1 + \frac{\hat{\beta}_1}{100}$ (Taylor series). So an alternative interpretation is: for a 1% increase in the predictor, the predicted response **increases by approximately $\hat{\beta}_1$ percent.** Note that this approximation works better when ${\hat{\beta}_1}$ is small in magnitude.
 
-*Please see the associated video as I go over the math explaining how we interpret regression coefficients when the both response and predictor variables are log transformed.*
+Please see the video below as I go over the math explaining how we interpret regression coefficients when the both response and predictor variables are log transformed.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Coeff Interpretation with Log Transformed X & Y" src="https://virginiauniversity.instructuremedia.com/embed/5c00a8f5-3dc1-4a83-a171-f0908263c57b" frameborder="0"></iframe>
 
 ### Some General Comments about Assessing Assumptions and Transformations
 
