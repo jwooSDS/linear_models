@@ -329,7 +329,9 @@ Take a look at the scatterplot of study time against number of courses taken, Fi
 - the fitted value when $x=3$, $x=4$, and $x=5$.
 - the residual for any data point on the plot of your choosing.
 
-*Try these on your own first, then view the associated video to see if you labeled the plot correctly!*
+The video below goes through these questions.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Mod 3 Practice Questions" src="https://virginiauniversity.instructuremedia.com/embed/86311238-6ff0-48ca-8cf7-7ccefb5b9209" frameborder="0"></iframe>
 
 ## Assessing Linear Association
 

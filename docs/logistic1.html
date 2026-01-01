@@ -535,8 +535,10 @@ We have a dataset, <code>students.txt</code>, that contains information on about
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Density Plot of Study Hours by Driven Drunk"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">gridExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/gridExtra/man/arrangeGrob.html">grid.arrange</a></span><span class="op">(</span><span class="va">dp1</span>, <span class="va">dp2</span>, <span class="va">dp3</span>, <span class="va">dp4</span>, ncol <span class="op">=</span> <span class="fl">2</span>, nrow <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-<pre><code>## Warning: Removed 3 rows containing non-finite values (`stat_density()`).</code></pre>
+<pre><code>## Warning: Removed 2 rows containing non-finite outside the scale range
+## (`stat_density()`).</code></pre>
+<pre><code>## Warning: Removed 3 rows containing non-finite outside the scale range
+## (`stat_density()`).</code></pre>
 <div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-301-1.png" width="672"></div>
 <ul>
 <li>Among those who have driven drunk, we see a fairly uniform proportion of students with GPAs between 2.75 and 3.5. For those who have not driven drunk, a higher proportion of students have higher GPAs (above 3.0).</li>
@@ -750,7 +752,7 @@ where <span class="math inline">\(I_1 = 1\)</span> if the student smokes, and <s
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Linear Models for Data Science</strong>" was written by Jeffrey Woo. It was last built on 2024-08-02.</p>
+    <p>"<strong>Linear Models for Data Science</strong>" was written by Jeffrey Woo. It was last built on 2026-01-01.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
