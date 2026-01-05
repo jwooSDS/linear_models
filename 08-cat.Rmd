@@ -164,7 +164,9 @@ Note the following from the output:
 
 How will the output for this regression change if the dummy coding was changed, i.e. $I_1 = 1$ if mutual firm and 0 if stock firm?
 
-*Please view the associated video to review this question, as well as for more commentary on dummy coding.*
+Please view the video below to review this question, as well as for more commentary on dummy coding.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="Dummy Coding" src="https://virginiauniversity.instructuremedia.com/embed/348d263d-fee4-4baa-badd-9ac1173ff855" frameborder="0"></iframe>
 
 ## Interaction Terms
 
@@ -349,7 +351,9 @@ Note $t_{1-\alpha/2,n-p}$ found using `qt(0.975, 38-4)`.
 
 The CI excludes 0, so there is a significant difference in the mean quality ratings for wines in the North and Central region, when controlling for flavor rating. The CI consists entirely of positive numbers, so the mean quality rating is higher for wines in the North region than the Central region, when controlling for flavor rating. 
 
-*View the associated video for more in depth explanation for constructing this CI.*
+View the video below for more in depth explanation for constructing this CI.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Variance Covariance Matrix with Indicator Variables" src="https://virginiauniversity.instructuremedia.com/embed/e12191dd-5b04-43bb-b4f7-bc346e0abb76" frameborder="0"></iframe>
 
 #### Hypothesis test
 
@@ -549,7 +553,9 @@ t &=& \frac{\hat{\beta}_2 - \hat{\beta}_3}{se(\hat{\beta}_2 - \hat{\beta}_3)} \n
 
 The critical value is 2.518259, found using `qt(1-0.05/(2*3), 38-4)`. The magnitudes of all of these test statistics are larger than the critical value, so there is a significant difference in mean quality rating of wines between which pair of regions, when controlling for flavor rating. 
 
-*View the associated video and the additional set of notes for an explanation of the rationale behind the Bonferroni procedure.*
+View the video below and the additional set of notes for an explanation of the rationale behind the Bonferroni procedure.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Outline of Bonferroni Procedure" src="https://virginiauniversity.instructuremedia.com/embed/21dba73c-dc71-4816-8524-f8725b5012b5" frameborder="0"></iframe>
 
 ### Tukey procedure
 
@@ -825,3 +831,7 @@ summary(pairwise)
 We can see that there is a significant difference in the mean Quality rating for all pairs of regions, for given flavor rating, since these tests are all significant. 
 
 Given the negative values for the difference in the estimated coefficients, wines from the Napa valley have the highest ratings, followed by wines from the North region, and then wines from the Central region, when flavor rating is controlled.
+
+Please view the video below for a demonstration of this tutorial.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Categorical Predictors Tutorial" src="https://virginiauniversity.instructuremedia.com/embed/cbf1eabf-335a-4cca-ab8a-f3c0ba47b368" frameborder="0"></iframe>
