@@ -182,7 +182,9 @@ knitr::include_graphics("images/3dplot.jpg")
 
 Due to limitations in human visualization, going beyond a 3-dimensional plot (1 response and 2 predictors) is difficult.
 
-*Please see the associated video for a little more explanation regarding the contour plot and 3-dimensional plot*.
+Please see the video below for a little more explanation regarding the contour plot and 3-dimensional plot.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Contour Plot" src="https://virginiauniversity.instructuremedia.com/embed/a8be17d6-8034-4ed1-99f0-37f6a4c2a006" frameborder="0"></iframe>
 
 ## Estimating coefficients in MLR
 
@@ -269,7 +271,9 @@ with $\sigma^{2}$ estimated by $MS_{res}$. A few notes about the variance-covari
 - the diagonal elements denote the variance of each estimated parameter. For example, the first diagonal element denotes the variance of $\hat{\beta}_0$, the first estimated parameter.
 - the off-diagonal elements denote the covariance between respective parameters. For example, the (1,2) entry denotes the covariance between $\hat{\beta}_0$ and $\hat{\beta}_1$.
 
-*Please see the associated video for a demonstration on how to read a variance-covariance matrix.*
+Please see the video below for a demonstration on how to read a variance-covariance matrix.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Variance Covariance Matrix" src="https://virginiauniversity.instructuremedia.com/embed/8756a2f4-1f3b-4d5d-a750-915cd02a3908" frameborder="0"></iframe>
 
 ## ANOVA $F$ Test in MLR
 
@@ -554,3 +558,7 @@ predict(result, newdata, level=0.95,
 You might realize by now we are using the same functions as we did in SLR.
 
 **Note**: Obviously, all these calculations are performed and interpreted assuming the regression assumptions are met. Regression assumptions are checked in the same way as in SLR. On your own, as practice, assess the regression assumptions. 
+
+Please view the video below for a demonstration of this tutorial.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: MLR Tutorial" src="https://virginiauniversity.instructuremedia.com/embed/485b28df-9212-46f6-8e75-f81167291c4e" frameborder="0"></iframe>

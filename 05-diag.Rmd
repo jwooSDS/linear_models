@@ -490,6 +490,10 @@ acf(result.ystar$residuals, main="ACF Plot of Residuals with ystar")
 
 None of the ACFs beyond lag 0 are significant, so we don't have evidence that the observations are dependent on each other. 
 
+Please view the video below for a demonstration of this example.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Assumptions Tutorial 1" src="https://virginiauniversity.instructuremedia.com/embed/13c7b650-1545-43c9-8f6c-7f0dac796478" frameborder="0"></iframe>
+
 ### Example 2
 
 ```{r, echo=FALSE}
@@ -603,3 +607,7 @@ $\hat{y^*} = 2.9037 + 0.3886x^{*}$, where $y^* = \log(y)$ and $x^* = \log(x)$. T
 + For a 1% increase in the area of a Galapagos island, the number of plant species found on the island is multiplied by $(1.01)^{0.3886} =  1.003874$, OR
 
 + For a 1% increase in the area of a Galapagos island, the number of plant species increases by about 0.3886%.
+
+Please view the video below for a demonstration of this example.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Assumptions Tutorial 2" src="https://virginiauniversity.instructuremedia.com/embed/26732ca2-59b4-44e0-96c6-3674795f149d" frameborder="0"></iframe>
