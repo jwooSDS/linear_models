@@ -797,3 +797,7 @@ car::avPlots(result.no.akdc.reduced)
 ```
 
 Partial regression plots should only be used to assess coefficients associated with quantitative predictors. The partial regression plot for the predictor `SPEND` has the plots evenly scattered on both sides of the blue line, indicating that we do not need to transform it. This should not be surprising given that the residual plot for the model does not indicate that the assumption that the errors have mean 0 was violated. 
+
+Please view the video below for a demonstration of this tutorial.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Residual Analysis Tutorial" src="https://virginiauniversity.instructuremedia.com/embed/30ba417e-d88c-4057-8423-f82d8a0fef8f" frameborder="0"></iframe>
