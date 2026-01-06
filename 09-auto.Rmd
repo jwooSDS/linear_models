@@ -331,6 +331,10 @@ It turns out that for this dataset, forward selection, backward elimination, and
 6. `step()` function can lead to different models if you have a different starting point.
 7. For the `step()` function, R uses AIC to decide when to stop the search. The textbook describes the procedure using the $F$ statistic. The choice of criteria could impact the end result.
 
+Please view the video below for a demonstration of this tutorial.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Automated Search Tutorial" src="https://virginiauniversity.instructuremedia.com/embed/eebd1ab3-057b-417c-82c7-1d10046dd3a1" frameborder="0"></iframe>
+
 ### Practice Question {-}
 
 For the candidate models found above, create residual plots and Box Cox plots to see if the response variable should be transformed. If needed, transform the response variable, and re run these the `regsubsets()` and `step()` functions to see what candidate models are suggested. 
