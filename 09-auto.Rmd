@@ -195,7 +195,9 @@ Suppose we start from the intercept-only model. What model gets selected by forw
 #### Practice question
 What model gets selected by backward elimination, if we start from the model with all 4 predictors?
 
-*View the associated video for a review of this practice question.*
+View the video below for a review of this practice question.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Automated Search Practice Question" src="https://virginiauniversity.instructuremedia.com/embed/18632d29-f6c0-435f-9dd2-f3f15a6ed700" frameborder="0"></iframe>
 
 #### Stepwise regression
 
