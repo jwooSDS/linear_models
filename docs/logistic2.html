@@ -7,7 +7,7 @@
 <title>Chapter 12 Logistic Regression 2 | Linear Models for Data Science</title>
 <meta name="author" content="Jeffrey Woo">
 <meta name="description" content="12.1 Introduction In the previous module, you learned about the logistic regression model, which is used when we have a binary response variable and at least one predictor. You learned how to...">
-<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="Chapter 12 Logistic Regression 2 | Linear Models for Data Science">
 <meta property="og:type" content="book">
 <meta property="og:description" content="12.1 Introduction In the previous module, you learned about the logistic regression model, which is used when we have a binary response variable and at least one predictor. You learned how to...">
@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="12.1 Introduction In the previous module, you learned about the logistic regression model, which is used when we have a binary response variable and at least one predictor. You learned how to...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -225,7 +225,7 @@ Figure 12.1: Confusion Matrix
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">roc_result</span>, main<span class="op">=</span><span class="st">"ROC Curve for Reduced Model"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span>, col<span class="op">=</span><span class="st">"red"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/points.html">points</a></span><span class="op">(</span>x<span class="op">=</span><span class="fl">0.2068966</span>, y<span class="op">=</span><span class="fl">0.6393443</span>, col<span class="op">=</span><span class="st">"blue"</span>, pch<span class="op">=</span><span class="fl">16</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-315-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-315-1.png" alt="" width="672"></div>
 <p>The ROC curve is the black curve on the plot, and displays the TPR and FPR of our logistic regression as we vary the threshold. Usually, a diagonal line is displayed as well (in red in the plot), and represents a model that classifies at random. We are comparing our black curve with the red diagonal line, to compare our model with a model that classifies at random.</p>
 <ul>
 <li>
@@ -311,7 +311,7 @@ Figure 12.2: Confusion Matrix with Unbalanced Response
 </h3>
 <p>Another issue to pay attention to is whether we have separation in our classification. <strong>Separation</strong> occurs when predictors almost perfectly predict the binary response variable. We have perfect or complete separation predictors perfectly predict the binary response variable.</p>
 <p>The scatterplot below shows an example of perfect separation (using simulated data):</p>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-317-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-317-1.png" alt="" width="672"></div>
 <p>We can easily draw a straight line on this scatterplot (say at <span class="math inline">\(x1 = 2\)</span>) that perfectly separates group 1 and group 2. To the left of this line is group 1, and to the right is group 2.</p>
 <p>Recall the two main uses of models are prediction and association. Separation is what we want if we are using the model for prediction. However, separation poses challenges if we want to gain insights into how the predictors are related to the response variable.</p>
 <p>The main issue with separation is that the standard errors of estimated coefficients get large. This implies that confidence intervals associated with coefficients are very wide, making interpretation of coefficients more challenging.</p>
@@ -428,7 +428,7 @@ Figure 12.2: Confusion Matrix with Unbalanced Response
 <span><span class="co">##plot ROC curve and overlay the diagonal line for random guessing</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">roc_result</span>, main<span class="op">=</span><span class="st">"ROC Curve for Reduced Model"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html">lines</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span>, col<span class="op">=</span><span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-325-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-325-1.png" alt="" width="672"></div>
 <ul>
 <li>The <code><a href="http://ipa-tys.github.io/ROCR/reference/prediction.html">prediction()</a></code> function transforms the vector of estimated probabilities and the vector of the response for the test set into a format that can be used with the <code><a href="http://ipa-tys.github.io/ROCR/reference/performance.html">performance()</a></code> function to create the ROC curve.</li>
 <li>The object <code>roc_result</code> stores the values of the true positive rate and false positive rate via the <code><a href="http://ipa-tys.github.io/ROCR/reference/performance.html">performance()</a></code> function. The arguments <code>measure</code> and <code>x.measure</code> are used to plot the true positive rate on the y-axis and false positive rate on the x-axis respectively.</li>
@@ -501,7 +501,7 @@ Figure 12.2: Confusion Matrix with Unbalanced Response
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Linear Models for Data Science</strong>" was written by Jeffrey Woo. It was last built on 2026-01-06.</p>
+    <p>"<strong>Linear Models for Data Science</strong>" was written by Jeffrey Woo. It was last built on 2026-01-14.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

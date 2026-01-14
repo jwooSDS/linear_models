@@ -7,7 +7,7 @@
 <title>Chapter 8 Categorical Predictors in MLR | Linear Models for Data Science</title>
 <meta name="author" content="Jeffrey Woo">
 <meta name="description" content="8.1 Introduction Thus far, we have only considered predictors that are quantitative in MLR. But what if we need or want to consider predictors that are categorical instead? For example, what if we...">
-<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="Chapter 8 Categorical Predictors in MLR | Linear Models for Data Science">
 <meta property="og:type" content="book">
 <meta property="og:description" content="8.1 Introduction Thus far, we have only considered predictors that are quantitative in MLR. But what if we need or want to consider predictors that are categorical instead? For example, what if we...">
@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="8.1 Introduction Thus far, we have only considered predictors that are quantitative in MLR. But what if we need or want to consider predictors that are categorical instead? For example, what if we...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -179,7 +179,8 @@ I_1 &amp;=&amp; \left\{ \begin{array}{ll} 1 &amp; \mbox{ if stock firm} \\ 0 &am
 <p>To see how we can interpret the regression coefficients with dummy coding, we can substitute the numerical value of the indicator variable in <a href="cat.html#eq:8additive">(8.2)</a> to obtain the regression equation for each firm type:</p>
 <ul>
 <li><p>Mutual firms: <span class="math inline">\(E(y|x) = \beta_0 + \beta_1x_1 +\beta_2(0) = \beta_0 + \beta_1x_1\)</span></p></li>
-<li><p>Stock firms: <span class="math inline">\(E(y|x) = \beta_0 + \beta_1x_1 + \beta_2(1) = (\beta_0+\beta_2) + \beta_1x_1\)</span></p></li>
+<li><p>Stock firms: <span class="math inline">\(E(y|x) = \beta_0 + \beta_1x_1 + \beta_2(1)
+= (\beta_0+\beta_2) + \beta_1x_1\)</span></p></li>
 </ul>
 <p>We make the following observations:</p>
 <ul>
@@ -201,7 +202,7 @@ I_1 &amp;=&amp; \left\{ \begin{array}{ll} 1 &amp; \mbox{ if stock firm} \\ 0 &am
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method<span class="op">=</span><span class="va">lm</span>, se<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Scatterplot of Time to Adopt Innovation against Assets, by Firm Type"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-209-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-209-1.png" alt="" width="672"></div>
 <p>We create a scatterplot of the response variable against the quantitative predictor, with separate colors and lines for firm type. Notice that the lines are almost parallel. We noted earlier that the formulation assumes the slopes are parallel.</p>
 <p><span class="math inline">\(\beta_1\)</span> denotes the slopes of both of these lines, and <span class="math inline">\(\beta_2\)</span> denotes how much higher the line is for stock firms than for mutual firms. Let us take a look at the estimated regression coefficients:</p>
 <div class="sourceCode" id="cb300"><pre class="downlit sourceCode r">
@@ -359,7 +360,7 @@ y = \beta_0 + \beta_1x_{1} + \beta_2I_1 + \beta_3 x_1 I_1 + \epsilon
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method<span class="op">=</span><span class="va">lm</span>, se<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Scatterplot of Wine Quality against Flavor, by Region"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-212-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-212-1.png" alt="" width="672"></div>
 <p>The regression equations are almost parallel so we consider a model with no interactions first. We can use the following indicator variables. Note that there are other ways to define them.</p>
 <!-- eqnarray environment issue -->
 <p>Since Napa Valley is California’s most famous wine region, we would like to make easy comparisons of other regressions with Napa Valley. So it makes sense to make Napa Valley the reference class.</p>
@@ -784,7 +785,7 @@ wines from the Central region, when flavor rating is controlled.</p>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method<span class="op">=</span><span class="va">lm</span>, se<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Scatterplot of Wine Quality against Flavor, by Region"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-224-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-224-1.png" alt="" width="672"></div>
 <p>We notice a positive linear association between <code>Quality</code> and <code>Flavor</code> across all three regions, the better the flavor of the wine, the higher the quality rating of the wine.</p>
 <p>The slopes are not exactly parallel, indicating that there may exist an interaction between the region of the wine and its flavor; the impact of flavor on quality rating differs among the regions. So a regression model with interaction between region and flavor may be appropriate.</p>
 </div>
@@ -854,7 +855,7 @@ wines from the Central region, when flavor rating is controlled.</p>
 <div class="sourceCode" id="cb335"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mfrow<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">reduced</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-229-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-229-1.png" alt="" width="672"></div>
 </div>
 <div id="multiple-comparisons" class="section level3 unnumbered">
 <h3>Multiple comparisons<a class="anchor" aria-label="anchor" href="#multiple-comparisons"><i class="fas fa-link"></i></a>
@@ -869,9 +870,9 @@ where <span class="math inline">\(I_1 = 1\)</span> if <code>North</code> and 0 o
 <li>
 <code>North</code>: <span class="math inline">\(E(y|x) = \beta_0 + \beta_ 2 + \beta_1 x_1\)</span>.</li>
 <li>
-<code>Central</code>: <span class="math inline">\(E(y|x) = \beta_0 + \beta_ 3 + \beta_1 x_1\)</span>.</li>
+<code>Central</code>: <span class="math inline">\(E(y|x)  = \beta_0 + \beta_ 3 + \beta_1 x_1\)</span>.</li>
 <li>
-<code>Napa</code>: <span class="math inline">\(E(y|x) = \beta_0 + \beta_1 x_1\)</span>.</li>
+<code>Napa</code>: <span class="math inline">\(E(y|x)  = \beta_0 + \beta_1 x_1\)</span>.</li>
 </ul>
 <p>Since there are 3 levels, there will be 3 possible pairs of regions to compare (while controlling for flavor rating):</p>
 <ul>
@@ -1083,7 +1084,7 @@ which is larger in magnitude than the critical value of 2.518259, so we reject t
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Linear Models for Data Science</strong>" was written by Jeffrey Woo. It was last built on 2026-01-06.</p>
+    <p>"<strong>Linear Models for Data Science</strong>" was written by Jeffrey Woo. It was last built on 2026-01-14.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

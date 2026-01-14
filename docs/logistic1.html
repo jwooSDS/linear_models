@@ -7,7 +7,7 @@
 <title>Chapter 11 Logistic Regression | Linear Models for Data Science</title>
 <meta name="author" content="Jeffrey Woo">
 <meta name="description" content="11.1 Introduction Up to this point, you have been learning about linear regression, which is used when we have one quantitative response variable and at least one predictor. When we have a binary...">
-<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="Chapter 11 Logistic Regression | Linear Models for Data Science">
 <meta property="og:type" content="book">
 <meta property="og:description" content="11.1 Introduction Up to this point, you have been learning about linear regression, which is used when we have one quantitative response variable and at least one predictor. When we have a binary...">
@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="11.1 Introduction Up to this point, you have been learning about linear regression, which is used when we have one quantitative response variable and at least one predictor. When we have a binary...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -193,7 +193,9 @@ L(y_1, \cdots, y_n, \boldsymbol{\beta}) = \prod_{i=1}^n f_i(y_i) = \prod_{i=1}^n
 \tag{11.7}
 \end{equation}\]</span></p>
 <p>There is no closed-form solution to maximizing <a href="logistic1.html#eq:11max">(11.7)</a>. A numerical method called iteratively reweighted least squares is used. The details of which are beyond the scope of this class.</p>
-<p><em>Please view the video for a more thorough explanation on maximum likelihood estimation.</em></p>
+<p>Please view the video below for a more thorough explanation on maximum likelihood estimation.</p>
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: ML Estimation" src="https://virginiauniversity.instructuremedia.com/embed/292dc521-82e1-40df-b544-003e881b18ec" frameborder="0">
+</iframe>
 </div>
 </div>
 <div id="interpreting-coefficients-in-logistic-regression" class="section level2" number="11.4">
@@ -236,7 +238,9 @@ L(y_1, \cdots, y_n, \boldsymbol{\beta}) = \prod_{i=1}^n f_i(y_i) = \prod_{i=1}^n
 <li>The estimated log odds of having driven while drunk for college students is 0.4136 higher for males than females, when controlling for the number of days they party.</li>
 <li>The estimated odds of having driven while drunk for male college students is <span class="math inline">\(\exp(0.4136) = 1.5123\)</span> times the odds for female college students, when controlling for the number of days they party.</li>
 </ul>
-<p><em>Please view the video for a more thorough explanation on interpreting the coefficients in logistic regression.</em></p>
+<p>Please view the video below for a more thorough explanation on interpreting the coefficients in logistic regression.</p>
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Coefficient interpretation in logistic regression" src="https://virginiauniversity.instructuremedia.com/embed/97d8043b-359c-4689-9a4a-94449fba3524" frameborder="0">
+</iframe>
 </div>
 <div id="inference-in-logistic-regression" class="section level2" number="11.5">
 <h2>
@@ -289,10 +293,6 @@ Z = \frac{\hat{\beta}_j - 0}{se(\hat{\beta}_j)},
 ## Call:
 ## glm(formula = DrivDrnk ~ PartyNum + Gender, family = binomial, 
 ##     data = train)
-## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -2.1357  -1.0211  -0.1941   1.0701   1.7302  
 ## 
 ## Coefficients:
 ##             Estimate Std. Error z value Pr(&gt;|z|)    
@@ -365,7 +365,7 @@ Z = \frac{\hat{\beta}_j - 0}{se(\hat{\beta}_j)},
 <ul>
 <li><span class="math inline">\(H_0: \beta_1 = \beta_2 = 0, H_a: \text{ at least one coefficient in null is nonzero.}\)</span></li>
 <li>
-<span class="math inline">\(\Delta G^2 = D(R) - D(F) = 169.13 - 151.93 = 17.2\)</span>.</li>
+<span class="math inline">\(\Delta G^2 = D(R) - D(F) =  169.13 - 151.93 = 17.2\)</span>.</li>
 <li>P-value is <code>1-pchisq(17.2,2)</code> which is close to 0.</li>
 <li>Critical value is <code>qchisq(0.95,2)</code> which is 5.9915.</li>
 <li>We reject the null hypothesis and support our two predictor over the intercept-only model.</li>
@@ -455,7 +455,7 @@ We have a dataset, <code>students.txt</code>, that contains information on about
 <code class="sourceCode R"><span><span class="co">##put barcharts in a matrix</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">gridExtra</span><span class="op">)</span></span>
 <span><span class="fu">gridExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/gridExtra/man/arrangeGrob.html">grid.arrange</a></span><span class="op">(</span><span class="va">chart1</span>, <span class="va">chart2</span>, <span class="va">chart3</span>, ncol <span class="op">=</span> <span class="fl">2</span>, nrow <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-298-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-298-1.png" alt="" width="672"></div>
 <ul>
 <li>We can see that a slightly higher proportion of male students have driven drunk, compared to female students.</li>
 <li>There is a much higher proportion of smokers who have driven drunk, compared to non smokers.</li>
@@ -539,7 +539,7 @@ We have a dataset, <code>students.txt</code>, that contains information on about
 ## (`stat_density()`).</code></pre>
 <pre><code>## Warning: Removed 3 rows containing non-finite outside the scale range
 ## (`stat_density()`).</code></pre>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-301-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-301-1.png" alt="" width="672"></div>
 <ul>
 <li>Among those who have driven drunk, we see a fairly uniform proportion of students with GPAs between 2.75 and 3.5. For those who have not driven drunk, a higher proportion of students have higher GPAs (above 3.0).</li>
 <li>A higher proportion of students who have not driven drunk party less than 10 days a month, compared to students who have driven drunk.</li>
@@ -576,10 +576,6 @@ We have a dataset, <code>students.txt</code>, that contains information on about
 <pre><code>## 
 ## Call:
 ## glm(formula = DrivDrnk ~ ., family = binomial, data = train)
-## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -1.9055  -0.8746  -0.4923   0.8913   2.0261  
 ## 
 ## Coefficients:
 ##             Estimate Std. Error z value Pr(&gt;|z|)  
@@ -653,10 +649,6 @@ We have a dataset, <code>students.txt</code>, that contains information on about
 ## glm(formula = DrivDrnk ~ Smoke + Marijuan + DaysBeer, family = binomial, 
 ##     data = train)
 ## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -2.3539  -0.8492  -0.5685   0.9106   1.9506  
-## 
 ## Coefficients:
 ##             Estimate Std. Error z value Pr(&gt;|z|)    
 ## (Intercept) -1.74079    0.39459  -4.412 1.03e-05 ***
@@ -703,6 +695,9 @@ where <span class="math inline">\(I_1 = 1\)</span> if the student smokes, and <s
 <pre><code>##         2         3         5         6         7         9 
 ## 0.1492121 0.2162750 0.8911219 0.7249273 0.1492121 0.8114190</code></pre>
 <p>So for observation index 2, the student’s predicted log odds of driving drunk is -1.7407941, with corresponding predicted probability of 0.1492121.</p>
+<p>Please view the video below for a demonstration of this tutorial.</p>
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="Module 11 Tutorial" src="https://virginiauniversity.instructuremedia.com/embed/bde34c2d-c9a2-4b39-ac9d-59c1d17fce1c" frameborder="0">
+</iframe>
 
 </div>
 </div>
@@ -752,7 +747,7 @@ where <span class="math inline">\(I_1 = 1\)</span> if the student smokes, and <s
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Linear Models for Data Science</strong>" was written by Jeffrey Woo. It was last built on 2026-01-06.</p>
+    <p>"<strong>Linear Models for Data Science</strong>" was written by Jeffrey Woo. It was last built on 2026-01-14.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

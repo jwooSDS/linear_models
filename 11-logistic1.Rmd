@@ -140,7 +140,9 @@ Using $\pi_i=\frac{\exp(\boldsymbol{x_i^{\prime}\beta})}{1 + \exp(\boldsymbol{x_
 
 There is no closed-form solution to maximizing \@ref(eq:11max). A numerical method called iteratively reweighted least squares is used. The details of which are beyond the scope of this class. 
 
-*Please view the video for a more thorough explanation on maximum likelihood estimation.*
+Please view the video below for a more thorough explanation on maximum likelihood estimation.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: ML Estimation" src="https://virginiauniversity.instructuremedia.com/embed/292dc521-82e1-40df-b544-003e881b18ec" frameborder="0"></iframe>
 
 ## Interpreting Coefficients in Logistic Regression
 
@@ -193,7 +195,9 @@ The estimated coefficient for $I_1$ is $\hat{\beta_2} = 0.4136$, and can be inte
 - The estimated log odds of having driven while drunk for college students is 0.4136 higher for males than females, when controlling for the number of days they party.
 - The estimated odds of having driven while drunk for male college students is $\exp(0.4136) = 1.5123$ times the odds for female college students, when controlling for the number of days they party.
 
-*Please view the video for a more thorough explanation on interpreting the coefficients in logistic regression.*
+Please view the video below for a more thorough explanation on interpreting the coefficients in logistic regression.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Coefficient interpretation in logistic regression" src="https://virginiauniversity.instructuremedia.com/embed/97d8043b-359c-4689-9a4a-94449fba3524" frameborder="0"></iframe>
 
 ## Inference in Logistic Regression
 
@@ -531,3 +535,7 @@ head(preds)
 ```
 
 So for observation index 2, the student's predicted log odds of driving drunk is -1.7407941, with corresponding predicted probability of 0.1492121.
+
+Please view the video below for a demonstration of this tutorial.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="Module 11 Tutorial" src="https://virginiauniversity.instructuremedia.com/embed/bde34c2d-c9a2-4b39-ac9d-59c1d17fce1c" frameborder="0"></iframe>
