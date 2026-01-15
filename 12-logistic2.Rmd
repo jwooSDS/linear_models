@@ -124,7 +124,9 @@ table(test$DrivDrnk, preds>0.7)
 ```
 For this confusion matrix, find the error rate, accuracy, FPR, FNR, TPR, TNR, and precision. 
 
-*View the associated video as I review this practice question.*
+View the video below as I review this practice question.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Confusion Matrix" src="https://virginiauniversity.instructuremedia.com/embed/342cf552-b528-48ea-a385-6393ab355127" frameborder="0"></iframe>
 
 ### Choice of threshold
 
@@ -192,7 +194,9 @@ The ROC curve is the black curve on the plot, and displays the TPR and FPR of ou
 
 On your own, can you locate the point on the ROC curve that corresponds to our logistic regression at a threshold of 0.7?
 
-*View the associated video as I review this practice question.*
+View the video below as I review this practice question.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: ROC" src="https://virginiauniversity.instructuremedia.com/embed/7d281807-fa6c-4674-a997-e428d263707e" frameborder="0"></iframe>
 
 ### AUC
 
@@ -432,3 +436,7 @@ auc@y.values
 ```
 
 The AUC of our ROC curve is 0.8355, which means our logistic regression does better than random guessing.
+
+Please view the video below for a demonstration of this tutorial.
+
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="Module 12 Tutorial" src="https://virginiauniversity.instructuremedia.com/embed/d8f05aa0-93fe-4983-83bf-381577f99453" frameborder="0"></iframe>
