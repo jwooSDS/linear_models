@@ -7,7 +7,7 @@
 <title>Chapter 10 Analysis of Residuals in MLR | Linear Models for Data Science</title>
 <meta name="author" content="Jeffrey Woo">
 <meta name="description" content="10.1 Introduction When we compute the sample average, a data point that is much larger or smaller than the rest of the data will have a large influence on the value of the average. We usually...">
-<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Chapter 10 Analysis of Residuals in MLR | Linear Models for Data Science">
 <meta property="og:type" content="book">
 <meta property="og:description" content="10.1 Introduction When we compute the sample average, a data point that is much larger or smaller than the rest of the data will have a large influence on the value of the average. We usually...">
@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="10.1 Introduction When we compute the sample average, a data point that is much larger or smaller than the rest of the data will have a large influence on the value of the average. We usually...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -475,13 +475,13 @@ D_i &amp;=&amp; \frac{\left( \boldsymbol{\hat{y}} - \boldsymbol{\hat{y}_{(i)}} \
 <span><span class="co">##residual plot</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mfrow<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-261-1.png" alt="" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-261-1.png" width="672"></div>
 <p>Looking at the residual plot at the top left, the assumption that the variance of the errors is constant is reasonably met, as the vertical spread of the residuals is similar throughout the plot. Assumption 1, that the errors have mean 0, is not met. We can see a curved pattern in the residuals and they are not evenly scattered across the horizontal axis. For small and large values on the horizontal axis, the residuals are almost exclusively negative and so do not have a mean of 0. For moderate values on the horizontal axis, the residuals are almost exclusively positive and so do not have a mean of 0.</p>
 <p>So we know that we need to transform at least one predictor, since assumption 1 is not met. However, the residual plot does not inform us which predictor to transform, and how. So we create partial regression plots:</p>
 <div class="sourceCode" id="cb399"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-forge.r-project.org/projects/car/">car</a></span><span class="op">)</span></span>
 <span><span class="fu">car</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/car/man/avPlots.html">avPlots</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-262-1.png" alt="" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-262-1.png" width="672"></div>
 <p>The first plot on the left is the partial regression plot for <span class="math inline">\(x_1\)</span>, and the second plot on the right is the partial regression plot for <span class="math inline">\(x_2\)</span>.</p>
 <ul>
 <li>Based on the partial regression plot for <span class="math inline">\(x_1\)</span>, we see a clear linear pattern, as the plots are evenly scattered across the blue line. So <span class="math inline">\(x_1\)</span> does not need to be transformed.</li>
@@ -498,13 +498,13 @@ D_i &amp;=&amp; \frac{\left( \boldsymbol{\hat{y}} - \boldsymbol{\hat{y}_{(i)}} \
 <span><span class="co">##diagnostic plots</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mfrow<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">result2</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-263-1.png" alt="" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-263-1.png" width="672"></div>
 <p>The residual plot now looks a lot more reasonable. The residuals are evenly scattered across the horizontal axis with constant vertical spread, so assumptions 1 and 2 are met. The transformation of <span class="math inline">\(x_2\)</span> was successful.</p>
 <p>Out of curiosity, we can look at the resulting partial regression plots:</p>
 <div class="sourceCode" id="cb401"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">##partial regression plots</span></span>
 <span><span class="fu">car</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/car/man/avPlots.html">avPlots</a></span><span class="op">(</span><span class="va">result2</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-264-1.png" alt="" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-264-1.png" width="672"></div>
 <p>It is not surprising to see that for both partial regression plots, the plots are evenly scattered across the blue lines. In fact, the slopes of the blue lines will be the same value as the corresponding estimated coefficient:</p>
 <div class="sourceCode" id="cb402"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">result2</span></span></code></pre></div>
@@ -545,7 +545,7 @@ D_i &amp;=&amp; \frac{\left( \boldsymbol{\hat{y}} - \boldsymbol{\hat{y}_{(i)}} \
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method<span class="op">=</span><span class="va">lm</span>, se<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Scatterplot of Pay against Expenditure, by Area"</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span><span class="op">(</span>label<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">Data</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-269-1.png" alt="" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-269-1.png" width="672"></div>
 <p>Based on this scatterplots, we note the following:</p>
 <ul>
 <li>Within each geographic region, teacher pay has a positive linear association with spending in public schools.</li>
@@ -562,14 +562,14 @@ D_i &amp;=&amp; \frac{\left( \boldsymbol{\hat{y}} - \boldsymbol{\hat{y}_{(i)}} \
 <div class="sourceCode" id="cb412"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mfrow<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-271-1.png" alt="" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-271-1.png" width="672"></div>
 <p>Look at the residuals vs leverage plot (bottom right). This plot identifies Alaska as having Cook’s distance greater than 1, and DC has Cook’s distance greater than 0.5. So based on Cook’s distance we have one influential observation: Alaska. Which is not terribly surprising as we saw in the scatterplots above that it was clearly a high leverage observation.</p>
 <p>Looking at the scale-location plot (bottom left), it appears the variance of the standardized residuals could be increasing. However, this could be unduly influenced by Alaska being influential and high leverage.</p>
 <p>The residual plot looks fine: they are generally evenly scattered across the horizontal axis with constant vertical variation.</p>
 <p>We take a look at the Box Cox plot.</p>
 <div class="sourceCode" id="cb413"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">MASS</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/MASS/man/boxcox.html">boxcox</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span> </span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-272-1.png" alt="" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-272-1.png" width="672"></div>
 <p>Notice that <span class="math inline">\(\lambda=1\)</span> is slightly outside the 95% CI. For now, we will not transform the response variable, given this, and that the residual plot looks fine.</p>
 </div>
 <div id="detecting-high-leverage-observations-and-outliers" class="section level3 unnumbered">
@@ -726,25 +726,25 @@ D_i &amp;=&amp; \frac{\left( \boldsymbol{\hat{y}} - \boldsymbol{\hat{y}_{(i)}} \
 <div class="sourceCode" id="cb431"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">DFBETAS</span><span class="op">[</span><span class="st">"DE"</span>,<span class="op">]</span></span></code></pre></div>
 <pre><code>##     (Intercept)       AREASouth        AREAWest           SPEND AREASouth:SPEND 
-##    1.881391e-16    4.723272e-01   -1.820466e-16   -1.602283e-16   -6.035000e-01 
+##    1.128835e-15    4.723272e-01   -6.863935e-16   -8.545510e-16   -6.035000e-01 
 ##  AREAWest:SPEND 
-##    1.740484e-16</code></pre>
+##    6.560284e-16</code></pre>
 <div class="sourceCode" id="cb433"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">DFBETAS</span><span class="op">[</span><span class="st">"DC"</span>,<span class="op">]</span></span></code></pre></div>
 <pre><code>##     (Intercept)       AREASouth        AREAWest           SPEND AREASouth:SPEND 
-##    0.000000e+00   -1.090038e+00    3.914820e-17   -4.202061e-17    1.334032e+00 
+##   -2.452921e-15   -1.090038e+00    1.455494e-15    1.848907e-15    1.334032e+00 
 ##  AREAWest:SPEND 
-##   -1.053346e-17</code></pre>
+##   -1.358816e-15</code></pre>
 <div class="sourceCode" id="cb435"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">DFBETAS</span><span class="op">[</span><span class="st">"WY"</span>,<span class="op">]</span></span></code></pre></div>
 <pre><code>##     (Intercept)       AREASouth        AREAWest           SPEND AREASouth:SPEND 
-##    1.106815e-16   -4.750184e-17    1.694842e-01   -8.698827e-17    4.232437e-17 
+##    2.021103e-16   -1.615063e-16    1.694842e-01   -1.547569e-16    1.058109e-16 
 ##  AREAWest:SPEND 
 ##   -2.807636e-01</code></pre>
 <div class="sourceCode" id="cb437"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">DFBETAS</span><span class="op">[</span><span class="st">"AK"</span>,<span class="op">]</span></span></code></pre></div>
 <pre><code>##     (Intercept)       AREASouth        AREAWest           SPEND AREASouth:SPEND 
-##   -6.422893e-16    2.607834e-16   -1.577954e+00    2.832032e-16   -1.936327e-16 
+##   -7.309710e-16    6.954223e-16   -1.577954e+00    3.368755e-16   -3.872654e-16 
 ##  AREAWest:SPEND 
 ##    1.870692e+00</code></pre>
 <p>Recall that DFBETAS measure the number of standard errors the estimated coefficients change with the removal of these observations.</p>
@@ -849,11 +849,11 @@ D_i &amp;=&amp; \frac{\left( \boldsymbol{\hat{y}} - \boldsymbol{\hat{y}_{(i)}} \
 <div class="sourceCode" id="cb450"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mfrow<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">result.no.akdc</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-284-1.png" alt="" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-284-1.png" width="672"></div>
 <p>Box Cox plot suggests we don’t need to transform the response variable.</p>
 <div class="sourceCode" id="cb451"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">MASS</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/MASS/man/boxcox.html">boxcox</a></span><span class="op">(</span><span class="va">result.no.akdc</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-285-1.png" alt="" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-285-1.png" width="672"></div>
 <p>Let us fit a model with no interaction between the predictors, and conduct a general linear F test to see if we can drop the interaction terms:</p>
 <div class="sourceCode" id="cb452"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">##no interactions</span></span>
@@ -876,7 +876,7 @@ D_i &amp;=&amp; \frac{\left( \boldsymbol{\hat{y}} - \boldsymbol{\hat{y}_{(i)}} \
 <div class="sourceCode" id="cb454"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-forge.r-project.org/projects/car/">car</a></span><span class="op">)</span></span>
 <span><span class="fu">car</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/car/man/avPlots.html">avPlots</a></span><span class="op">(</span><span class="va">result.no.akdc.reduced</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-287-1.png" alt="" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-287-1.png" width="672"></div>
 <p>Partial regression plots should only be used to assess coefficients associated with quantitative predictors. The partial regression plot for the predictor <code>SPEND</code> has the plots evenly scattered on both sides of the blue line, indicating that we do not need to transform it. This should not be surprising given that the residual plot for the model does not indicate that the assumption that the errors have mean 0 was violated.</p>
 <p>Please view the video below for a demonstration of this tutorial.</p>
 <iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Residual Analysis Tutorial" src="https://virginiauniversity.instructuremedia.com/embed/30ba417e-d88c-4057-8423-f82d8a0fef8f" frameborder="0">
@@ -944,7 +944,7 @@ D_i &amp;=&amp; \frac{\left( \boldsymbol{\hat{y}} - \boldsymbol{\hat{y}_{(i)}} \
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Linear Models for Data Science</strong>" was written by Jeffrey Woo. It was last built on 2026-01-15.</p>
+    <p>"<strong>Linear Models for Data Science</strong>" was written by Jeffrey Woo. It was last built on 2026-01-28.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

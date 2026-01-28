@@ -53,7 +53,7 @@ The scatterplot shown in Figure \@ref(fig:ass1)(b) is an example of when this as
 
 Please see the video below for more explanation on how to use Figure \@ref(fig:ass1) to assess assumption 1. 
 
-<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Checking Assumption 1 using Scatterplot" src="https://virginiauniversity.instructuremedia.com/embed/db4864f2-d44a-4904-9749-64f1c6847f4e" frameborder="0"></iframe>
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="Checking Assumption 1 using Scatterplot" src="https://virginiauniversity.instructuremedia.com/embed/54a1f8fe-8d51-49d8-b172-057d7b4f4095" frameborder="0"></iframe>
 
 #### Consequences of violating this assumption
 
@@ -79,7 +79,7 @@ The scatterplot shown in Figure \@ref(fig:ass2)(b) is an example of when this as
 
 Please see the video below for more explanation on how to use Figure \@ref(fig:ass2) to assess assumption 2.
 
-<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="STAT 6021: Checking Assumption 2 using Scatterplot" src="https://virginiauniversity.instructuremedia.com/embed/54a1f8fe-8d51-49d8-b172-057d7b4f4095" frameborder="0"></iframe>
+<iframe width="560px" height="320px" allowfullscreen="true" allow="autoplay *" title="Checking Assumption 2 using Scatterplot" src="https://virginiauniversity.instructuremedia.com/embed/db4864f2-d44a-4904-9749-64f1c6847f4e" frameborder="0"></iframe>
 
 #### Consequences of violating this assumption
 
