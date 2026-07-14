@@ -534,7 +534,7 @@ Data%>%
 
 ### Create a new variable based on existing variable(s)
 
-As mentioned in the previously, the `mutate()` function is used to transform a variable or to create a new variable. There are a few variations of this task, based on the type of variable you want to create, and the type of variable it is based on. 
+As mentioned previously, the `mutate()` function is used to transform a variable or to create a new variable. There are a few variations of this task, based on the type of variable you want to create, and the type of variable it is based on. 
 
 #### Create a numeric variable based on another numeric variable
 
